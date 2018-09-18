@@ -32,6 +32,7 @@ public class ArrowAnimator extends Thread {
                     @Override
                     public void run() {
                         image.setY(image.getY()+5);
+                        System.out.println(image.getY());
                     }
                 });
 

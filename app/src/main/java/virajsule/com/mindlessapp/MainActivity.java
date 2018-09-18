@@ -17,16 +17,18 @@ public class MainActivity extends AppCompatActivity {
     float lineTop;
     float lineBottom;
     int score=0;
+    ImageView line;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         doStuff();
+        line = (ImageView) findViewById(R.id.line);
 
-        ImageView line = (ImageView) findViewById(R.id.line);
-        lineTop = line.getY();
-        lineBottom = line.getY()+line.getHeight();
+
+
+
     }
 
     public void doStuff(){
@@ -34,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                lineTop = line.getTop();
+                System.out.println(lineTop);
+                lineBottom = line.getY()+line.getHeight();
                 generate();
-
 
             }
         });
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageResource(R.drawable.left);
         constraintLayout.addView(imageView,130,130);
         imageView.setX(42f);
-        System.out.println(imageView.getY());
+//        System.out.println(imageView.getY());
 
         animate(imageView);
 
@@ -81,11 +85,11 @@ public class MainActivity extends AppCompatActivity {
 //        animation.start();
         ArrowAnimator arrowAnimator = new ArrowAnimator(10,image,this, 1700);
         arrowAnimator.start();
-        System.out.println("line: " + lineTop);
+//        System.out.println("line: " + lineTop);
 
         if (image.getY()+image.getHeight()>= lineTop && image.getY()<=lineBottom){
             score++;
-            System.out.println(image.getY());
+//            System.out.println(image.getY());
 
 //            System.out.println(score);
 //            System.out.println(image.getBottom());

@@ -1,4 +1,4 @@
-package virajsule.com.mindlessapp;
+package virajsule.com.arrowswiper;
 
 import android.app.Activity;
 import android.view.View;

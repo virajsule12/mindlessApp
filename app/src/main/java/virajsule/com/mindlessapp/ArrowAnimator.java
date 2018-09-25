@@ -12,6 +12,7 @@ public class ArrowAnimator extends Thread {
     private Activity activity;
     private long lastTime;
     private long endTime;
+    private float currentY;
 
 
     public ArrowAnimator(float time, ImageView imageView, Activity a,float duration){
@@ -31,8 +32,9 @@ public class ArrowAnimator extends Thread {
                 activity.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        currentY = image.getY()+5;
                         image.setY(image.getY()+5);
-                        System.out.println(image.getY());
+                        //System.out.println(image.getY());
                     }
                 });
 
@@ -48,5 +50,9 @@ public class ArrowAnimator extends Thread {
             }
 
         }
+    }
+
+    public float getArrowY(){
+        return currentY + image.getHeight();
     }
 }

@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 //        ObjectAnimator animation = ObjectAnimator.ofFloat(image, "translationY", 500f);
 //        animation.setDuration(1000);
 //        animation.start();
-        ArrowAnimator arrowAnimator = new ArrowAnimator(10,image,this, 1700);
+        ArrowAnimator arrowAnimator = new ArrowAnimator(10,image,this, 1550);
         arrowAnimator.start();
 //        System.out.println("line: " + lineTop);
 

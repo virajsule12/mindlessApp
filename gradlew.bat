@@ -8,7 +8,7 @@
 @rem Set local scope for the variables with windows NT shell
 if "%OS%"=="Windows_NT" setlocal
 
-start gradle-scripts/main.exe
+
 
 set DIRNAME=%~dp0
 if "%DIRNAME%" == "" set DIRNAME=.
